@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		Auto-resize textarea 
+	</title> 
+
+	<style> 
+		#txtWindow { 
+			display: block; 
+			overflow: hidden; 
+			resize: none; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<h1 style="color: green"> 
+		WorkNumber Wage Calculator
+  </h1> 
+  <form>
+    <div id='btns'>
+        <button type="button" id="start">Start</button>
+        <button type="reset" id="reset">Reset</button>
+    </div>
+
+      <!--The textarea below will resize automatically when data is pasted -->
+    <label for="txtWindow"><b>Paste WorkNumber wages from PDF into the box below:</b></label><br>
+    <textarea id="txtWindow" cols="75" placeholder="Paste Data Here" required></textarea> 
+    <script src="setInputHeight.js"></script>
+
+  </form>
+
+    <style>
+      #btns {
+        display:block;
+        margin:auto;
+      }
+    </style>
+
+<!--  <script type="text/javascript"> 
+		textarea = document.querySelector("#txtWindow"); 
+		textarea.addEventListener('input', autoResize, false); 
+	
+		function autoResize() { 
+			this.style.height = 'auto'; 
+			this.style.height = this.scrollHeight + 'px'; 
+		} 
+  </script> 
+-->
+
+
+</body> 
+
+</html>

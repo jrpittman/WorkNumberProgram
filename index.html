@@ -1,0 +1,21 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      let string1 ='Data 12/01/2018 not provided 12/18/2017 15.83 $129.01 $119.14';
+      let payDate = string1.match(/\d{2}\/\d{2}\/\d{4}/g);
+      payDate = payDate[1] ? payDate[1] : payDate[0]; 
+      payDate = payDate.replace(/\//g,'-');
+      payDate = new Date(payDate);
+
+      let grossPay = string1.match(/\$\d+\.\d{2}/);
+      let gPay = grossPay[0].replace(/\$/,'');
+      gPay=parseFloat(gPay);
+       //let gPay = parseFloat(grossPay.match(/\d+\.\d{2}/))
+       
+      console.log(payDate)
+      console.log(gPay);
+      console.log(typeof payDate,typeof gPay);
+    </script>
+  </body>
+</html>
